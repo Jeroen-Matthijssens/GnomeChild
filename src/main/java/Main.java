@@ -16,7 +16,6 @@ public class Main {
     private static JDA jda;
 
     public static void main(String[] args) {
-
         try {
             jda = new JDABuilder(AccountType.BOT).addEventListener(new GnomeListener()).setToken(tokenGet()).buildBlocking();
         } catch (LoginException e) {
@@ -26,10 +25,8 @@ public class Main {
         } catch (RateLimitedException e) {
             e.printStackTrace();
         }
-
-
-
     }
+
     public static String tokenGet() {
 
         Path path = Paths.get("","token.txt");
